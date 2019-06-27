@@ -164,7 +164,9 @@ Como podemos ver, hay dos argumentos opcionales, ficheroAnuncios y ficheroFotos.
 
 Por defecto, en el caso de que en el directorio que se ejecuta no existan los ficheros "ads" y "pictures", estos serán creados vacíos. En estos archivos será en los que se vayan almacenando los datos del sistema a medida que se introduzcan.
 
-Dentro de la carpeta TestJuniorV3 se encuentra el proyecto completo de Eclipse, con el código fuente.
+## Código fuente
+
+Dentro de la carpeta TestJuniorV3 se encuentra el proyecto completo de Eclipse.
 
 [json]: <https://es.wikipedia.org/wiki/JSON>
 [java]: <https://www.java.com/es/download/>
