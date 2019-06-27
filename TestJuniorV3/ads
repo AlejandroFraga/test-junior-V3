@@ -1,0 +1,96 @@
+[
+  {
+    "id": 8,
+    "description": "Maravilloso chalet situado en als afueras de un pequeño pueblo rural. El entorno es espectacular, las vistas magníficas. ¡Cómprelo ahora!",
+    "typology": "CHALET",
+    "houseSize": 150,
+    "gardenSize": 20,
+    "pictures": [
+      1,
+      7
+    ],
+    "rating": 65,
+    "ratingDate": "Jun 27, 2019 11:33:11 PM"
+  },
+  {
+    "id": 4,
+    "description": "Ático céntrico muy luminoso y recién reformado, parece nuevo",
+    "typology": "FLAT",
+    "houseSize": 130,
+    "gardenSize": 0,
+    "pictures": [
+      5
+    ],
+    "rating": 60,
+    "ratingDate": "Jun 27, 2019 11:33:11 PM"
+  },
+  {
+    "id": 6,
+    "description": "",
+    "typology": "GARAGE",
+    "houseSize": 0,
+    "gardenSize": 0,
+    "pictures": [
+      6
+    ],
+    "rating": 50,
+    "ratingDate": "Jun 27, 2019 11:33:11 PM"
+  },
+  {
+    "id": 5,
+    "description": "Pisazo",
+    "typology": "FLAT",
+    "houseSize": 0,
+    "gardenSize": 0,
+    "pictures": [
+      3,
+      4
+    ],
+    "rating": 35,
+    "ratingDate": "Jun 27, 2019 11:33:11 PM"
+  },
+  {
+    "id": 2,
+    "description": "Nuevo ático céntrico recién reformado. No deje pasar la oportunidad y adquiera este ático de lujo",
+    "typology": "FLAT",
+    "houseSize": 0,
+    "gardenSize": 0,
+    "pictures": [
+      4
+    ],
+    "rating": 30,
+    "ratingDate": "Jun 27, 2019 11:33:11 PM"
+  },
+  {
+    "id": 3,
+    "description": "",
+    "typology": "CHALET",
+    "houseSize": 210,
+    "gardenSize": 25,
+    "pictures": [
+      2
+    ],
+    "rating": 20,
+    "ratingDate": "Jun 27, 2019 11:33:11 PM"
+  },
+  {
+    "id": 1,
+    "description": "Este piso es una ganga, compra, compra, COMPRA!!!!!",
+    "typology": "CHALET",
+    "houseSize": 300,
+    "gardenSize": 0,
+    "pictures": [],
+    "rating": 0,
+    "ratingDate": "Jun 27, 2019 11:33:11 PM"
+  },
+  {
+    "id": 7,
+    "description": "Garaje en el centro de Albacete",
+    "typology": "GARAGE",
+    "houseSize": 0,
+    "gardenSize": 0,
+    "pictures": [],
+    "rating": 0,
+    "ratingDate": "Jun 27, 2019 11:33:11 PM"
+  }
+]
