@@ -148,6 +148,24 @@ Puesto que el sistema que se planteaba era bastante sencillo, y no se valoraría
 
 La interfaz en este caso simplemente es la impresión por terminal del resultado de las valoraciones. En un proyecto real, una interfaz gráfica bien implementada, podría facilitar la inclusión de nuevas fuentes de datos. Del mismo modo, la revisión de resultados sería presentada de una forma más intuitiva y visual.
 
+El sistema actualmente tiene que ser ejecutado de cada vez para la introducción de nuevos anuncios y/o fotos, combinando esta información con la que ya esté almacenada. Esto se realizó así, puesto que en la especificación tan solo se requería que se mostrasen los resultados de las valoraciones.
+
+Puesto que actualmente se maneja una cantidad bastante pequeña de anuncios, estos se cargan dinámicamente en listas/hashmap de objetos en ejecución, para que sea más facil manejarlos. Esto fue diseñado así puesto que un sistema dinámico de acceso a datos almacenados en un sistema de ficheros sería demasiado complejo para la simplicidad que busca este sistema de gestión.
+
+## Utilización
+
+Para ejecutar el proyecto, se dispone del .jar. Este se ejecutará con el siguiente comando:
+
+```sh
+$ java -jar test_junior_v3_Alejandro_Fraga_Cimadevila.jar [ficheroAnuncios] [ficheroFotos]
+```
+
+Como podemos ver, hay dos argumentos opcionales, ficheroAnuncios y ficheroFotos. Si se le indica una ruta relativa al directorio, desde el cual se ejecute el jar, a unos archivos que almacenen información sobre anuncios y/fotos respectivamente, estos datos serán cargados en el sistema y almacenados en la ejecución.
+
+Por defecto, en el caso de que en el directorio que se ejecuta no existan los ficheros "ads" y "pictures", estos serán creados vacíos. En estos archivos será en los que se vayan almacenando los datos del sistema a medida que se introduzcan.
+
+Dentro de la carpeta TestJuniorV3 se encuentra el proyecto completo de Eclipse, con el código fuente.
+
 [json]: <https://es.wikipedia.org/wiki/JSON>
 [java]: <https://www.java.com/es/download/>
 [gson]: <https://github.com/google/gson>
