@@ -1,4 +1,4 @@
-# TestJuniorV3
+# test-junior-V3
 Test Junior v3 - Idealista - Backend Developer
 
 Para iniciar el proyecto, se realizó un estudio de las Historias de Usuario adjuntadas para así convertirlas en requisitos. Estos requisitos definiran pequeños objetivos o metas que cumplir, descomponiendo el trabajo global en diferentes apartados.
