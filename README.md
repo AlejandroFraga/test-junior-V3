@@ -1,5 +1,9 @@
 # Test Junior v3 - [Idealista](https://www.idealista.com/) - Backend Developer
 
+This project was a code test for a job interview at the Spanish company Idealista as a Junior Java Backend developer in 2019. An international online portal of the real estate market.
+
+## Introducción
+
 Para iniciar el proyecto, se realizó un estudio de las Historias de Usuario adjuntadas para así convertirlas en requisitos. Estos requisitos definiran pequeños objetivos o metas que cumplir, descomponiendo el trabajo global en diferentes apartados.
 
 ## Requisitos:
