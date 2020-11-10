@@ -2,11 +2,12 @@
 
 This project was a code test for a job interview at the Spanish company Idealista as a Junior Java Backend developer in 2019. An international online portal of the real estate market.
 
-## Introducción
+## Proyecto
 
 Para iniciar el proyecto, se realizó un estudio de las Historias de Usuario adjuntadas para así convertirlas en requisitos. Estos requisitos definiran pequeños objetivos o metas que cumplir, descomponiendo el trabajo global en diferentes apartados.
 
-## Requisitos:
+### Requisitos
+
  - Cada anuncio recibirá una puntuación entre 0 y 100 puntos
  - Si el anuncio no tiene fotos: -10 puntos
  - Por cada foto HD: 20 puntos, si no lo es: 10 puntos
@@ -25,7 +26,7 @@ Para iniciar el proyecto, se realizó un estudio de las Historias de Usuario adj
 
 Tras esta descomposición se observó la información a tratar, que seguía la siguiente estructura:
 
-```sh
+```JSON
 [
   {
     "id": 1,
@@ -60,6 +61,7 @@ Puesto que es el IDE en el cual tengo más experiencia, y dispone de la construc
 Ahora empezaremos a estudiar la información a almacenar. Esta serán Anuncios y Fotos. A mayores de los campos que se muestran en la información a tratar introduciremos 2 campos nuevos en los Anuncios. Estos campos serán la valoración y la fecha de la valoración. Con el objetivo de que el asegurador de calidad pueda ver desde cuando un anuncio tiene una valoración en concreto, y la propia valoración. Estos campos también se utilizarán para poder ordenar de mejor a peor los anuncios, y mostrarle los relevantes al usuario.
 
 También podemos observar que typology dentro de los anuncios, y quality dentro de las fotos, tendrán un valor dentro de un rango limitado predeterminado. Por lo tanto crearemos enumerados de Java para ambos, facilitando así enormemente su uso.
+
  ### Typology
  
 | Valor posible |
@@ -122,22 +124,25 @@ Como comentábamos, tan solo almacenará los identificadores de las fotos, no el
 Para estructurar el proyecto se creará el paquete com.idealista.testJuniorV3 y desde aquí seguiremos una estructura [MVC][mvc] (Modelo, Vista y Controlador). Dentro de cada uno de estos subpaquetes crearemos la parte correspondiente del sistema.
 
 ### Model
+
 La estructura de datos del sistema, la cual se acaba de especificar en las tablas anteriores.
 
 ### Controller
+
 La lógica de negocio. En la cual se creará una clase encargada de iniciar y ejecutar el sistema de valoraciones (RatingSystem). Se creará una fachada (Facade) que siga el patrón de diseño [Facade][facade] para la centralización del flujo del programa, conectando los componentes del sistema mediante esta "centralita". Esta fachada será mucho más útil a medida que el proyecto crezca, controlando el flujo del mismo de forma ordenada, evitando, por ejemplo que varios sistemas, en el caso de que se creasen nuevos, necesitasen instanciar de nuevo clases comunes.
 
 Habrá dos clases más en este paquete, las cuales serán [DAOs][dao]. Estas serán las encargadas de las conexiones con los almacenes de datos de anuncios (AdsDAO) y fotos (PicturesDAO). Estas clases serán muy útiles para poder encapsular todo el funcionamiento de el almacenamiento de datos, pudiendo ser sustituidos de forma independiente uno de ellos por una conexión a una BD de MySql sin que el resto del sistema tenga que modificarse lo más mínimo. Desde fuera de los DAOs lo único que se hará será pedirles datos y administrarles datos para que los actualicen, guarden o borren.
 
 ### View
+
 Este paquete estará destinado a las vistas y GUIs que existan en el sistema. En este caso se pedía explícitamente que no se implementase interfaz gráfica. Por lo tanto, en este caso, le paquete tan solo tendrá una clase (Printer), la cual se encargará de imprimir por pantalla los resultados que se piden en el proyecto.
 
 ### Utils
+
 Aunque no se especifique dentro del modelo MVC este 4º paquete, es bastante útil (valga la redundancia), tener un paquete común en el cual almacenar funciones las cuales se utilizarán a todos los niveles, en todos los paquetes. Estas funciones pueden ser leer/escribir de/en ficheros (FileUtils), comprobaciones en colecciones de elementos (CollectionUtils), o valoraciones de anuncios (RatingUtils).
 
-
-
 ## Puntos fuertes
+
 Mediante la propia línea de comandos, a parte de los datos almacenados, se podrá indicar la lectura de un archivo de anuncios, o un archivo de anuncios y uno de fotos, desde los cuales poder cargar en el sistema los datos dentro de los mismos. Permitiendo así que cualquier persona que ejecuta el código, pueda incluir nueva información facilmente.
 
 El sistema está completamente creado y comentado en inglés para así facilitar que pueda ser manipulado por cualquier otra persona en el futuro.
@@ -147,6 +152,7 @@ El sistema está creado siguiendo una política de código limpio y claro, para 
 La fecha de valoración no se actualiza hasta que se introduce un nuevo anuncio, o el resultado de la valoración da un resultado diferente tras un reinicio del sistema o actualización del anuncio. De este modo asguramos que el encargado de calidad sepa la fecha correcta de la valoración actual del anuncio.
 
 ## Puntos a mejorar
+
 Puesto que el sistema que se planteaba era bastante sencillo, y no se valoraría persistencia de datos, se utilizan ficheros para la lectura y escritura de datos. Este sistema, en un proyecto real y de mayor embergadura debería implementarse en una BD.
 
 La interfaz en este caso simplemente es la impresión por terminal del resultado de las valoraciones. En un proyecto real, una interfaz gráfica bien implementada, podría facilitar la inclusión de nuevas fuentes de datos. Del mismo modo, la revisión de resultados sería presentada de una forma más intuitiva y visual.
